@@ -45,3 +45,13 @@ preload를 설정하고 main.js 에서 링크를 걸어준다.
 
 index.html 마지막에 script 를 링크를 걸어서  
 번들링된 파일을 넣는 형식인거 같음
+
+## Vite 연동해보기
+
+### CJS, MJS
+
+Vite 를 사용할려면 es module 을 사용해야는데 electron 과 충돌이 났다.  
+에러로그를 읽고 파일별로 분리하는 법을 찾았고, main.js => main.cjs 로 변경했다.
+
+-   CJS : Common JS
+-   MJS : ECM JS
