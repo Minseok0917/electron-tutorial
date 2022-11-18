@@ -36,7 +36,7 @@ const { app, BroswerWindow } = require("electron");
 ### preload.js
 
 Node.js 전역객체인 process 를 index.html 에서 호출 불가능하니  
-proload 라는곳에서 일일히 넣어주는 역할을 하는거 같다.
+proload 라는곳에서 일일이 넣어주는 역할을 하는거 같다.
 
 하지만 Vue 에 적용할 예정이라 사용할 일이 있을까 싶다.  
 preload를 설정하고 main.js 에서 링크를 걸어준다.
