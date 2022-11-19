@@ -55,3 +55,15 @@ Vite 를 사용할려면 es module 을 사용해야는데 electron 과 충돌이
 
 -   CJS : Common JS
 -   MJS : ECM JS
+
+### Client 개발서버 구성
+
+2022년 11월 20일에 개발서버 기본 구성만 설정해놨다.  
+아직 프로젝트를 원할하게 사용하기에는 무리가 있고 추후 NPM 에 배포할 예정이다.
+
+1. Javascrpit 파일 생성
+2. Vite Build 함수와 Vite Run 함수 생성
+3. electron 실행시키는 runElectron 이라는 함수 생성
+4. 공통함수를 하나 생성하고 buildVite, runVite, runElectonr 순서대로 호출
+5. chokidar 를 사용하여 소스 변경 감지 후 buildVite 재실행
+6. electron main.js 에 소스 변경시 새로고침되는 electron-reload 적용
