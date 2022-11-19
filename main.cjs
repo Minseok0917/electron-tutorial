@@ -7,18 +7,12 @@ const createWindow = () => {
         height: 600,
     });
 
-    win.loadFile("./dist/index.html");
+    win.loadFile(`./.minseok0917/vue/index.html`);
 };
 app.whenReady().then(() => {
     createWindow();
 });
-app.on("window-all-closed", () => {
-    if (process.platform !== "darwin") app.quit();
-});
-app.whenReady().then(() => {
-    createWindow();
 
-    app.on("activate", () => {
-        if (BrowserWindow.getAllWindows().length === 0) createWindow();
-    });
+require("electron-reload")("./.minseok0917/vue/", {
+    electron: require(`${__dirname}/node_modules/electron`),
 });
